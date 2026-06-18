@@ -1,0 +1,11 @@
+def calculate_discounted_price(bill, num_items):
+    if num_items >= 10:
+        total_amt = bill * 0.8 # 20% discount for 10 or more items
+    elif num_items >= 5 and num_items <= 9:
+        total_amt = bill * 0.9 # 10% discount for 5 to 9 items
+    else:
+        total_amt = bill # No discount for less than 5 items
+    print("Total amount after discount:", total_amt)
+Bill =float(input("Enter the total bill amount: $"))
+Num_items = int(input("Enter the number of items purchased:"))
+calculate_discounted_price(Bill, Num_items)
